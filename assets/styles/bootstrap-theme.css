@@ -475,6 +475,7 @@ fieldset[disabled] .btn-danger.active {}
 
 .form-control:focus {
     border-color: #00b5df;
+    border-radius: 2px;
 }
 
 @media screen and (min-width: 768px) {
@@ -530,7 +531,9 @@ fieldset[disabled] .btn-danger.active {}
 .list-group-item.active:hover .badge,
 .list-group-item.active:focus .badge {}
 
-.panel {}
+.panel {
+    border-radius: 2px;
+}
 
 .panel-default > .panel-heading {}
 

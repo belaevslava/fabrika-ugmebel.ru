@@ -289,12 +289,24 @@ button>img {
 .product-info .product-price-bar {
     margin-bottom: 20px;
 }
+.product-info .product-option-bar>div:not(:last-child):after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 5px;
+    width: 0;
+    height: 40px;
+    border-right: #bebebe 1px solid;
+}
 .product-info .product-option-bar img {
     margin-bottom: 10px;
 }
 
 .product-info-buying .btn {
     padding: 10px 20px;
+    min-width: 120px;
 }
 
 .products.complect .product-item-details {
@@ -369,10 +381,10 @@ button>img {
     margin-bottom: 25px;
 }
 
-.btn-remove,
-.btn-remove:focus,
-.btn-remove:active,
-.btn-remove:hover {
+.remove-complect-item,
+.remove-complect-item:focus,
+.remove-complect-item:active,
+.remove-complect-item:hover {
     color: #ff0000;
 }
 .product-count {
@@ -470,7 +482,6 @@ button>img {
 #ourShops .is-content {
     padding: 60px;
 }
-
 #productCarousel>.carousel-inner>.item.img-cover {
     height: 380px;
 }
@@ -550,7 +561,7 @@ button>img {
     color: #222;
 }
 .table-basket>tfoot {
-    background-color: #ffdc37;
+    background-color: #ff9900;
     border-width: 0;
     color: #222;
 }
@@ -588,7 +599,7 @@ button>img {
     font-weight: bold;
     border-right: 1px solid rgba(255,255,255, .2);
 }
-.table-basket .btn-remove {
+.table-basket .remove-complect-item {
     border-radius: 0;
     padding: 5px 10px;
 }
@@ -690,6 +701,9 @@ header label {
 
 .product-item {
     position: relative;
+}
+.product-item .product-count[disabled] {
+    border-color: transparent;
 }
 .product-item-discount {
     width: 50px;
@@ -812,6 +826,7 @@ section#news {
     padding: 40px 0;
 }
 
+section.product-catalog,
 section#productComplect {
     margin-bottom: 60px;
 }
@@ -1001,5 +1016,13 @@ section#productComplect {
     #productCarousel .carousel-indicators>li.active,
     #productCarousel .carousel-indicators>li {
         height: 60px;
+    }
+    .product-info .product-option-bar>div:not(:last-child):after {
+        display: none;
+    }
+
+    .nav-tabs>li>a {
+        padding-right: 10px;
+        padding-left: 10px;
     }
 }
