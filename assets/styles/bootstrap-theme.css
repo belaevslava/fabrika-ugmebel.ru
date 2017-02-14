@@ -32,13 +32,14 @@ section {
 	box-shadow: none;
 }
 
-.btn-default,
-.btn-primary,
-.btn-success,
-.btn-info,
-.btn-warning,
 .btn-danger {
-    border-width: 0;
+    background-color: #fff;
+    color: #ff2222;
+    border-color: #ff2222;
+}
+.btn-danger:hover {
+    background-color: #ff2222;
+    border-color: #ff2222;
 }
 
 .btn-default:active,
@@ -122,6 +123,7 @@ fieldset[disabled] .btn-danger {}
 .btn-default.active {
 	background-color: #f5f5f5;
 	border: #ff9900 1px solid;
+    color: #ff9900;
 }
 
 .btn-default.disabled,
@@ -618,8 +620,36 @@ fieldset[disabled] .btn-danger.active {}
 }
 
 .nav-tabs {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    border-bottom-color: #ff9900;
 }
+.nav-tabs>li.pull-right>a {
+    background-color: transparent;
+    border-color: transparent;
+    padding-right: 0;
+    padding-left: 0;
+}
+.nav-tabs>li>a {
+    border-radius: 0;
+    background-color: #ebebb6;
+    color: #212121;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.nav-tabs>li.active>a, 
+.nav-tabs>li.active>a:focus, 
+.nav-tabs>li.active>a:hover {
+    border-color: #ff9900;
+    border-bottom-color: transparent;
+    color: #ff9900;
+    margin-top: -3px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
 
 .input-group-lg>.form-control, 
 .input-group-lg>.input-group-addon, 
@@ -632,4 +662,16 @@ fieldset[disabled] .btn-danger.active {}
     height: auto;
 }
 
+.well {
+    background-color: #fff5e1;
+    border: none;
+    box-shadow: none;
+    border-radius: 2px;
+}
+
+.form-control+.input-group-addon,
+.form-control {
+    border-color: #ff9900;
+    color: #ff9900;
+}
 /*# sourceMappingURL=bootstrap-theme.css.map */
