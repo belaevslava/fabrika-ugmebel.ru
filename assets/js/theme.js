@@ -25,6 +25,16 @@ jQuery.noConflict();
 			productItemContainer.attr('removed', '');
 			// Скрываем (как будто удален)
 			productItemCol.addClass('hidden');
-		})
+		});
+
+		// Если не хватает контента, увеличиваем высоту общего блока, поджимая футер к низу
+		var windowHeight = $(window).outerHeight(),
+			mainElement = $('main'),
+			mainElementOffsetTop = mainElement.offset().top,
+			footer = $('footer#footer'),
+			footerHeight = footer.outerHeight(),
+			mainElementMinHeight = (windowHeight - footerHeight - mainElementOffsetTop);
+
+		mainElement.css({ minHeight: mainElementMinHeight });
 	});
 })(jQuery)

@@ -473,8 +473,7 @@ fieldset[disabled] .btn-danger.active {}
     background-color: #ff9900;
 }
 
-.form-control:focus {
-    border-color: #00b5df;
+.form-control {  
     border-radius: 2px;
 }
 

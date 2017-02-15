@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Мэри мебель</title>
+    <title>Юг мебель</title>
     <!-- Bootstrap core CSS -->
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap template CSS -->
@@ -112,129 +112,310 @@
             </div>
         </header>
         <main id="main">
+            <nav id="catalogNavigation">
+                <ul class="nav nav-justified">
+                    <li><a href="#">Спальни</a></li>
+                    <li><a href="#">Гостиные</a></li>
+                    <li><a href="#">Кухни</a></li>
+                </ul>
+            </nav>
+
             <!-- /Dynamic page content -->
-            <section id="content" class="container">
-                <br>
+            <section id="basketContainer" class="container">
                 <h1 class="text-center">Корзина</h1>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-8 col-xs-offset-2">
-                            <div class="panel panel-info">
-                                <div class="panel-heading">
-                                    <div class="panel-title">
-                                        <div class="row">
-                                            <div class="col-xs-6">
-                                                <h5><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</h5>
-                                            </div>
-                                            <div class="col-xs-6">
-                                                <button type="button" class="btn btn-primary btn-sm btn-block">
-                                                    <span class="glyphicon glyphicon-share-alt"></span> Continue shopping
-                                                </button>
-                                            </div>
-                                        </div>
+                <section id="basket" class="panel panel-default">
+                    <table class="table table-basket table-adaptive">
+                        <thead>
+                            <tr>
+                                <td class="col-photo">Фото</td>
+                                <td class="col-name">Наименование</td>
+                                <td class="col-price">Цена</td>
+                                <td class="col-count">Количество</td>
+                                <td class="col-total-price">Итоговая стоимость</td>
+                                <td class="col-remove"></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="row-product">
+                                <td class="col-photo">
+                                    <div class="img-cover" style="background-image: url(content/media/products/thumbnails/product_11.png);"></div>
+                                </td>
+                                <td class="col-name">
+                                    <h4>Шкаф Мона Лиза</h4>
+                                    <label>Товар</label>
+                                </td>
+                                <td class="col-price product--price"><var>51 697</var> руб.</td>
+                                <td class="col-count">
+                                    <form class="product-item-form">
+                                        <input type="text" class="form-control" value="1" placeholder="Кол-во">
+                                    </form>
+                                </td>
+                                <td class="col-total-price product--price"><var>51 697</var> руб.</td>
+                                <td class="col-remove">
+                                    <button class="btn btn-danger btn-remove"><span class="glyphicon glyphicon glyphicon-trash"></span><span class="visible-xs-inline">&nbsp;&nbsp;Удалить</span></button>
+                                </td>
+                            </tr>
+                            <tr class="row-product-complect">
+                                <td class="col-photo">
+                                    <div class="img-cover" style="background-image: url(content/media/products/thumbnails/product_10.png);"></div>
+                                </td>
+                                <td class="col-name">
+                                    <h4>Спальный гарнитур Джоконда (беж)</h4>
+                                    <label>Комплект</label>
+                                    <div>
+                                        <button type="button" class="btn btn-info btn-sm text-uppercase" data-toggle="collapse" href="#complectDetailsContent-1">Состав комплекта</button>
                                     </div>
-                                </div>
-                                <div class="panel-body">
-                                    <div class="row">
-                                        <div class="col-xs-2"><img class="img-responsive" src="http://placehold.it/100x70">
-                                        </div>
-                                        <div class="col-xs-4">
-                                            <h4 class="product-name"><strong>Product name</strong></h4><h4><small>Product description</small></h4>
-                                        </div>
-                                        <div class="col-xs-6">
-                                            <div class="col-xs-6 text-right">
-                                                <h6><strong>25.00 <span class="text-muted">x</span></strong></h6>
+                                </td>
+                                <td class="col-price product--price"><var>151 692</var> руб.</td>
+                                <td class="col-count">
+                                    <form class="product-item-form">
+                                        <input type="text" class="form-control" value="1" placeholder="Кол-во">
+                                    </form>
+                                </td>
+                                <td class="col-total-price product--price"><var>151 692</var> руб.</td>
+                                <td class="col-remove">
+                                    <button class="btn btn-danger btn-remove"><span class="glyphicon glyphicon glyphicon-trash"></span><span class="visible-xs-inline">&nbsp;&nbsp;Удалить</span></button>
+                                </td>
+                            </tr>
+                            <tr class="row-product-complect-details">
+                                <td colspan="6">
+                                    <!-- Attribute "Id" have render dinamically. -->
+                                    <div id="complectDetailsContent-1" class="collapse product-complect-details">
+                                        <!-- Complect -->
+                                        <div class="row complect products">
+                                            <!-- Complect item -->
+                                            <div class="col-md-3 col-sm-6">
+                                                <div class="complect-item product-item">
+                                                    <a href="#" class="btn btn-link btn-block remove-complect-item"><span class="glyphicon glyphicon glyphicon-trash"></span>&nbsp;&nbsp;Удалить</a>
+                                                    <a href="#" class="img-cover" style="background-image: url(content/media/products/thumbnails/product_4.png);"></a>
+                                                    <div class="product-item-details">
+                                                        <div class="product-name row">
+                                                            <div class="col-xs-10">
+                                                                <h4>Шкаф 5-ти ств.</h4>
+                                                            </div>
+                                                            <div class="col-xs-2">
+                                                                 <select name="" id="" class="pull-right product-count">
+                                                                    <option value="1">1 шт</option>
+                                                                    <option value="2">2 шт</option>
+                                                                    <option value="3">3 шт</option>
+                                                                    <option value="4">4 шт</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <table class="table-options">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td><label>Ширина</label></td>
+                                                                    <td><span>655 мм</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label>Высота</label></td>
+                                                                    <td><span>2520 мм</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label>Длина</label></td>
+                                                                    <td><span>2400 мм</span></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <div class="row">
+                                                            <div class="col-lg-6 product--old-price"></div>
+                                                            <div class="col-lg-6 product--price"><var>300 000</var> руб.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="col-xs-4">
-                                                <input type="text" class="form-control input-sm" value="1">
+                                            <!-- /Complect item -->
+                                            <div class="col-md-3 col-sm-6">
+                                                <div class="complect-item product-item">
+                                                    <a href="#" class="btn btn-link btn-block remove-complect-item"><span class="glyphicon glyphicon glyphicon-trash"></span>&nbsp;&nbsp;Удалить</a>
+                                                    <a href="#" class="img-cover" style="background-image: url(content/media/products/thumbnails/product_5.png);"></a>
+                                                    <div class="product-item-details">
+                                                        <div class="product-name row">
+                                                            <div class="col-xs-10">
+                                                                <h4>Туалетный столик</h4>
+                                                            </div>
+                                                            <div class="col-xs-2">
+                                                                 <select name="" id="" class="pull-right product-count">
+                                                                    <option value="1">1 шт</option>
+                                                                    <option value="2">2 шт</option>
+                                                                    <option value="3">3 шт</option>
+                                                                    <option value="4">4 шт</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <table class="table-options">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td><label>Ширина</label></td>
+                                                                    <td><span>1700 мм</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label>Высота</label></td>
+                                                                    <td><span>480 мм</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label>Длина</label></td>
+                                                                    <td><span>850 мм</span></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <div class="row">
+                                                            <div class="col-lg-6 product--old-price"><var>450 000</var> руб.</div>
+                                                            <div class="col-lg-6 product--price"><var>300 000</var> руб.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="col-xs-2">
-                                                <button type="button" class="btn btn-link btn-xs">
-                                                    <span class="glyphicon glyphicon-trash"> </span>
-                                                </button>
+                                            <div class="col-md-3 col-sm-6">
+                                                <div class="complect-item product-item">
+                                                    <a href="#" class="btn btn-link btn-block remove-complect-item"><span class="glyphicon glyphicon glyphicon-trash"></span>&nbsp;&nbsp;Удалить</a>
+                                                    <a href="#" class="img-cover" style="background-image: url(content/media/products/thumbnails/product_6.png);"></a>
+                                                    <div class="product-item-details">
+                                                        <div class="product-name row">
+                                                            <div class="col-xs-10">
+                                                                <h4>Кровать</h4>
+                                                            </div>
+                                                            <div class="col-xs-2">
+                                                                 <select name="" id="" class="pull-right product-count">
+                                                                    <option value="1">1 шт</option>
+                                                                    <option value="2">2 шт</option>
+                                                                    <option value="3">3 шт</option>
+                                                                    <option value="4">4 шт</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <table class="table-options">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td><label>Ширина</label></td>
+                                                                    <td><span>655 мм</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label>Высота</label></td>
+                                                                    <td><span>2520 мм</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label>Длина</label></td>
+                                                                    <td><span>2400 мм</span></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <div class="row">
+                                                            <div class="col-lg-6 product--old-price"><var>450 000</var> руб.</div>
+                                                            <div class="col-lg-6 product--price"><var>300 000</var> руб.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6">
+                                                <div class="complect-item product-item">
+                                                    <a href="#" class="btn btn-link btn-block remove-complect-item"><span class="glyphicon glyphicon glyphicon-trash"></span>&nbsp;&nbsp;Удалить</a>
+                                                    <a href="#" class="img-cover" style="background-image: url(content/media/products/thumbnails/product_7.png);"></a>
+                                                    <div class="product-item-details">
+                                                        <div class="product-name row">
+                                                            <div class="col-xs-10">
+                                                                <h4>Тумбочка</h4>
+                                                            </div>
+                                                            <div class="col-xs-2">
+                                                                 <select name="" id="" class="pull-right product-count">
+                                                                    <option value="1">1 шт</option>
+                                                                    <option value="2" selected="">2 шт</option>
+                                                                    <option value="3">3 шт</option>
+                                                                    <option value="4">4 шт</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <table class="table-options">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td><label>Ширина</label></td>
+                                                                    <td><span>1700 мм</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label>Высота</label></td>
+                                                                    <td><span>480 мм</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><label>Длина</label></td>
+                                                                    <td><span>850 мм</span></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <div class="row">
+                                                            <div class="col-lg-6 product--old-price"><var>450 000</var> руб.</div>
+                                                            <div class="col-lg-6 product--price"><var>300 000</var> руб.</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
+                                        <!-- /Complect -->
                                     </div>
-                                    <hr>
-                                    <div class="row">
-                                        <div class="col-xs-2"><img class="img-responsive" src="http://placehold.it/100x70">
-                                        </div>
-                                        <div class="col-xs-4">
-                                            <h4 class="product-name"><strong>Product name</strong></h4><h4><small>Product description</small></h4>
-                                        </div>
-                                        <div class="col-xs-6">
-                                            <div class="col-xs-6 text-right">
-                                                <h6><strong>25.00 <span class="text-muted">x</span></strong></h6>
-                                            </div>
-                                            <div class="col-xs-4">
-                                                <input type="text" class="form-control input-sm" value="1">
-                                            </div>
-                                            <div class="col-xs-2">
-                                                <button type="button" class="btn btn-link btn-xs">
-                                                    <span class="glyphicon glyphicon-trash"> </span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="row">
-                                        <div class="text-center">
-                                            <div class="col-xs-9">
-                                                <h6 class="text-right">Added items?</h6>
-                                            </div>
-                                            <div class="col-xs-3">
-                                                <button type="button" class="btn btn-default btn-sm btn-block">
-                                                    Update cart
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="panel-footer">
-                                    <div class="row text-center">
-                                        <div class="col-xs-9">
-                                            <h4 class="text-right">Total <strong>$50.00</strong></h4>
-                                        </div>
-                                        <div class="col-xs-3">
-                                            <button type="button" class="btn btn-success btn-block">
-                                                Checkout
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot class="text-right">
+                            <tr>
+                                <td colspan="4">Итоговая стоимость: </td>
+                                <td class="product--price">684 042 руб.</td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </section>
                 
-                <br>
-                <div class="text-center">
-                    <a role="button" class="btn btn-outline text-uppercase" data-toggle="collapse" href="#drawingUpOfAnOrder">Начать оформление заказа</a>
-                    <div id="drawingUpOfAnOrder" class="collapse">
-                        <br>
-                        <h3 class="text-uppercase">Оформление заказа</h3>
-                        <br>
-                        <h4>Тип доставки</h4>
-                        <div class="btn-group" data-toggle="buttons">
-                          <label class="btn btn-outline active">
-                            <input type="radio" name="needDelivery" id="option1" value="false" autocomplete="off" checked><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Самовывоз
-                          </label>
-                          <label class="btn btn-outline">
-                            <input type="radio" name="needDelivery" id="option2" value="true" autocomplete="off"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Доставка
-                          </label>
-                        </div>
-                        <br>
-                        <br>
-                        <div class="row">
-                            <div class="col-md-7 col-sm-8 col-md-offset-2 col-sm-offset-2">
-                                <form action="" method="POST" class="form-horizontal form-order" role="form">
-                                    <div class="delivery-block collapse">
-                                        <div class="row">
-                                            <div class="col-md-2"></div>
-                                            <div class="col-md-10">
-                                                <h4>Подъем на этаж</h4>
-                                            </div>
-                                        </div>
+                <p class="text-center padded">
+                    <a role="button" class="btn btn-info btn-lg" data-toggle="collapse" href="#drawingUpOfAnOrder">Начать оформление заказа</a>
+                </p>
+                <section id="drawingUpOfAnOrder" class="collapse">
+                    <!-- Tab Panel -->
+                    <div role="tabpanel">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#pickup" aria-controls="home" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Самовывоз</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#delivery" aria-controls="tab" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Доставка</a>
+                            </li>
+                        </ul>
+                    
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="pickup">
+                                <form action="" method="POST" role="form" class="col-md-4 col-sm-6 col-md-offset-4 col-sm-offset-3">
+                                    <legend class="text-center">Форма заявки</legend>
+                                    <div class="form-group">
+                                        <label for="">Фамилия</label>
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Имя</label>
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Отчество</label>
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Телефон</label>
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">E-mail</label>
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                    </div>
+
+                                    <p class="text-center">
+                                        <button type="submit" class="btn btn-primary btn-lg">Оформить заказ</button>
+                                    </p>
+                                </form>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="delivery">
+                                <form action="" method="POST" role="form" class="col-md-4 col-sm-6 col-md-offset-4 col-sm-offset-3">
+                                    <legend class="text-center">Подъем на этаж</legend>
+                                    <div class="form-group">
                                         <ul class="list-unstyled text-left the-rise-of-the-floor">
                                             <li>
                                                 <div class="radio">
@@ -269,118 +450,78 @@
                                                 </div>
                                             </li>
                                         </ul>
-                                        <br>
-                                        <br>
                                     </div>
-                                    <div id="personalInfo">
-                                        <div class="row">
-                                            <div class="col-md-2"></div>
-                                            <div class="col-md-10">
-                                                <h4>Форма заявки</h4>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-3 is-label">Фамилия</div>
-                                            <div class="col-sm-9">
-                                                <input type="text" class="form-control" placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-3 is-label">Имя</div>
-                                            <div class="col-sm-9">
-                                                <input type="text" class="form-control" placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-3 is-label">Отчество</div>
-                                            <div class="col-sm-9">
-                                                <input type="text" class="form-control" placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-3 is-label">Телефон</div>
-                                            <div class="col-sm-9">
-                                                <input type="text" class="form-control" placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-3 is-label">E-mail</div>
-                                            <div class="col-sm-9">
-                                                <input type="email" class="form-control" placeholder="">
-                                            </div>
-                                        </div>
+                                    
+                                    <legend class="text-center">Форма заявки</legend>
+                                    <div class="form-group">
+                                        <label for="">Фамилия</label>
+                                        <input type="text" class="form-control" id="" placeholder="">
                                     </div>
-                                    <br>
-                                    <div class="collapse delivery-block">
-                                        <div class="row">
-                                            <div class="col-md-2"></div>
-                                            <div class="col-md-10">
-                                                <h4>Адрес доставки</h4>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-3 is-label">Индекс</div>
-                                            <div class="col-sm-9">
-                                                <input type="number" class="form-control" placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-3 is-label">Область</div>
-                                            <div class="col-sm-9">
-                                                <input type="text" class="form-control" placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-3 is-label">Город</div>
-                                            <div class="col-sm-9">
-                                                <input type="text" class="form-control" placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-3 is-label">Улица</div>
-                                            <div class="col-sm-9">
-                                                <input type="text" class="form-control" placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-3 is-label">Корпус</div>
-                                            <div class="col-sm-9">
-                                                <input type="text" class="form-control" placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-3 is-label">Дом</div>
-                                            <div class="col-sm-9">
-                                                <input type="text" class="form-control" placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-3 is-label">Квартира</div>
-                                            <div class="col-sm-9">
-                                                <input type="text" class="form-control" placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-3 is-label">Способ оплаты</div>
-                                            <div class="col-sm-9">
-                                                <select name="" id="input" class="form-control" required="required">
-                                                    <option value="">Наличными</option>
-                                                </select>
-                                            </div>
-                                        </div>
+                                    <div class="form-group">
+                                        <label for="">Имя</label>
+                                        <input type="text" class="form-control" id="" placeholder="">
                                     </div>
-                                    <br>
-                                    <button type="button" class="btn btn-info btn-lg">Оформить заказ</button>
-                                    <br>
-                                    <br>
+                                    <div class="form-group">
+                                        <label for="">Отчество</label>
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Телефон</label>
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">E-mail</label>
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                    </div>
+
+                                    <legend class="text-center">Адрес доставки</legend>
+                                    <div class="form-group">
+                                        <label for="">Индекс</label>
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Область</label>
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Город</label>
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Улица</label>
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Корпус</label>
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Дом</label>
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Квартира</label>
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Способ оплаты</label>
+                                        <select class="form-control" name="" id="">
+                                            <option value="">Наличными</option>
+                                        </select>
+                                    </div>
+
+                                    <p class="text-center">
+                                        <button type="submit" class="btn btn-primary btn-lg">Оформить заказ</button>
+                                    </p>
                                 </form>
                             </div>
                         </div>
                     </div>
-                </div>
-                <br>
+                    <!-- /Tab Panel -->
+                </section>
             </section>
             <!-- /Dynamic page content -->
+
         </main>
         <footer id="footer">
             <div class="container padded">
