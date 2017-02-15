@@ -485,23 +485,6 @@ button>img {
 #productCarousel>.carousel-inner>.item.img-cover {
     height: 380px;
 }
-#productCarousel .carousel-indicators {
-    position: static;
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-    left: 0;
-    margin: 0 auto;
-    margin-bottom: 20px;
-}
-#productCarousel .carousel-indicators>li {
-    display: table-cell;
-    width: 100%;
-    height: 90px;
-    margin: 0;
-    padding: 0;
-    background-color: transparent;
-}
 #productCarousel .another-photos-title {
     margin: 15px 0;
     position: relative;
@@ -527,8 +510,22 @@ button>img {
 #productCarousel .carousel-inner>.item>img {
     margin: 0 auto;
 }
-#productCarousel .carousel-indicators .active {
+#productCarousel .carousel-indicators {
+    position: static;
+    display: block;
     width: 100%;
+    height: 94px;
+    left: 0;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+#productCarousel .carousel-indicators>li {
+    width: 25%;
+    height: 90px;
+    margin: 0;
+    padding: 0;
+    float: left;
+    background-color: transparent;
 }
 #productCarousel .carousel-indicators .img-cover {
     border: #fff 2px solid;
