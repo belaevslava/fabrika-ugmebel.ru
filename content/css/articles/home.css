@@ -1,34 +1,38 @@
 #showroom {
-	background-color: #FFEB66;
+    background-color: #FFEB66;
 }
+
 #sectionGallery .gallery {
-	display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
+
 .showroom {
-	background-image: url(../../media/articles/home/showroom.png);
-	background-size: auto 100%;
-	background-position: right center;
-	background-repeat: no-repeat;
-	padding: 60px 0;
+    background-image: url(../../media/articles/home/showroom.png);
+    background-size: auto 100%;
+    background-position: right center;
+    background-repeat: no-repeat;
+    padding: 60px 0;
 }
+
 .showroom h2 {
-	margin-top: 0;
+    margin-top: 0;
 }
 
 .margin-top-12 {
-	margin-top: 12px;
+    margin-top: 12px;
 }
 
 @media (max-width: 1200px) {
-	.showroom {
-		padding: 24px 0;
-	}
+    .showroom {
+        padding: 24px 0;
+    }
 }
 
 @media (max-width: 992px) {
-	.showroom {
-		background-image: none;
-		text-align: center;
-	}
+    .showroom {
+        background-image: none;
+        text-align: center;
+    }
 }
-
