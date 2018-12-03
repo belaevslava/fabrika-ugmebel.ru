@@ -1,7 +1,49 @@
 {
-  "name": "ug-mebel",
+  "name": "fabrika-ugmebel.ru",
   "version": "1.0.0",
-  "description": "Юг Мебель",
+  "description": "Frontend for «South Mebel» factory",
+  "homepage": "https://belaevslava.github.io/fabrika-ugmebel.ru/home.html",
+  "previews": {
+    "directory": "previews",
+    "images": [
+      {
+        "path": "home.png",
+        "title": "Home"
+      },
+      {
+        "path": "catalog.png",
+        "title": "Catalog"
+      },
+      {
+        "path": "product.png",
+        "title": "Product"
+      },
+      {
+        "path": "complect.png",
+        "title": "Complect"
+      },
+      {
+        "path": "cart.png",
+        "title": "Cart"
+      },
+      {
+        "path": "artcles/showroom.png",
+        "title": "Showroom"
+      },
+      {
+        "path": "artcles/about.png",
+        "title": "About"
+      },
+      {
+        "path": "artcles/delivery.png",
+        "title": "Delivery"
+      },
+      {
+        "path": "artcles/for_partners.png",
+        "title": "For Partners"
+      }
+    ]
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
