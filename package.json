@@ -27,19 +27,19 @@
         "title": "Cart"
       },
       {
-        "path": "artcles/showroom.png",
+        "path": "articles/showroom.png",
         "title": "Showroom"
       },
       {
-        "path": "artcles/about.png",
+        "path": "articles/about.png",
         "title": "About"
       },
       {
-        "path": "artcles/delivery.png",
+        "path": "articles/delivery.png",
         "title": "Delivery"
       },
       {
-        "path": "artcles/for_partners.png",
+        "path": "articles/for_partners.png",
         "title": "For Partners"
       }
     ]
