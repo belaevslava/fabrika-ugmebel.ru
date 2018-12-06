@@ -5,6 +5,9 @@
   "homepage": "https://belaevslava.github.io/fabrika-ugmebel.ru/home.html",
   "previews": {
     "directory": "previews",
+    "main": {
+      "path": "/thumbs/home.png",
+    },
     "images": [
       {
         "path": "home.png",
